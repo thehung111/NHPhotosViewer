@@ -16,7 +16,7 @@ public class NHPhotoCollectionViewCell: UICollectionViewCell {
         didSet {
             if let photo = photo {
                 if let url = photo.image_url {
-                    imageView?.kf.setImage(with: url)
+                    imageView?.kf.setImage(with: url, placeholder: photo.placeholder_image )
                 }
                 else if let img = photo.image  {
                     imageView?.image = img

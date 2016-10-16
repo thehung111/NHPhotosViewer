@@ -12,6 +12,7 @@ open class NHPhoto: NSObject {
     public var caption: String?
     public var image: UIImage?
     public var image_url : URL?
+    public var placeholder_image : UIImage?
     
     public init(image: UIImage){
         self.image = image

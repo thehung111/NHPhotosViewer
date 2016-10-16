@@ -15,13 +15,13 @@ public protocol NHPhotosViewControllerDelegate: class {
     func photo(photoController: NHPhotosViewController, index: Int) -> NHPhoto
 }
 
-open class NHPhotosViewController: UICollectionViewController {
+open class NHPhotosViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     /// delegate for getting photos and possible interaction events
     public weak var delegate: NHPhotosViewControllerDelegate?
     
     /// spacing at the top
-    public var topSpacing : CGFloat = 2.0 {
+    public var topSpacing : CGFloat = 1.0 {
         didSet{
             let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
             layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: topSpacing)
@@ -29,7 +29,7 @@ open class NHPhotosViewController: UICollectionViewController {
     }
     
     /// spacing at the bottom
-    public var bottomSpacing : CGFloat = 2.0 {
+    public var bottomSpacing : CGFloat = 1.0 {
         didSet{
             let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
             layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: topSpacing)
@@ -90,9 +90,9 @@ open class NHPhotosViewController: UICollectionViewController {
     open func reloadLayout(){
         
         // reset number of columns to 2 if invalid
-        if(numOfColumns < 2){
-            numOfColumns = 2
-            print ("There must be at least 2 columns.")
+        if(numOfColumns < 1){
+            numOfColumns = 1
+            print ("There must be at least 1 column")
         }
         
         let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
@@ -103,6 +103,7 @@ open class NHPhotosViewController: UICollectionViewController {
         
         layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: topSpacing)
         layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: bottomSpacing)
+        layout.scrollDirection = .vertical
     }
 
     
@@ -133,16 +134,6 @@ open class NHPhotosViewController: UICollectionViewController {
         return cell
     }
     
-    // MARK: UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("collection delegate called ")
-        let itemSize = floor(  (view.bounds.size.width - CGFloat(numOfColumns - 1) * itemSpacing ) / CGFloat(numOfColumns))
-        return CGSize(width: itemSize, height: itemSize)
-        
-    }
-
     // MARK: UICollectionViewDelegate
 
     /*

@@ -15,6 +15,17 @@ class ViewController: UIViewController, NHPhotosViewControllerDelegate {
     private var photos: [NHPhoto] = []
     private var viewer: NHPhotosViewController?
     
+    // create fake placeholder image for demo
+    private func createPlaceHolderImg(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage{
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +46,17 @@ class ViewController: UIViewController, NHPhotosViewControllerDelegate {
                         "http://27.media.tumblr.com/tumblr_m33tqurL3r1qzex9io1_1280.jpg",
                         "http://25.media.tumblr.com/tumblr_m2lzsjdSf41qze6dko1_1280.jpg",
                         "http://25.media.tumblr.com/tumblr_lyh6hdod1r1r23g2co1_500.jpg",
-                        "http://25.media.tumblr.com/tumblr_lhlj908K5O1qgnva2o1_400.jpg"
+                        "http://25.media.tumblr.com/tumblr_lhlj908K5O1qgnva2o1_400.jpg",
+                        "http://25.media.tumblr.com/broken.png" , // simulate broken link
+                        
+                        
                     ]
+        
+       let placeholderImg = self.createPlaceHolderImg(color: UIColor.lightText)
         
         for url in urls {
             let photo = NHPhoto(url: URL(string: url)! )
+            photo.placeholder_image = placeholderImg
             photos.append(photo)
         }
         
