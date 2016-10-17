@@ -31,7 +31,7 @@ class ViewController: UIViewController, NHPhotosViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // random cat pictures
+        // random cat pictures from cat api feed
         let urls : [String] =
                     [   "http://24.media.tumblr.com/tumblr_m3dr46KfE41r73wdao1_500.jpg",
                         "http://24.media.tumblr.com/tumblr_lydjzwPcax1qzsbdto1_250.gif",
@@ -76,11 +76,11 @@ class ViewController: UIViewController, NHPhotosViewControllerDelegate {
     
 
     //MARK: NHPhotosViewControllerDelegate
-    func numOfPhotos(photoController: NHPhotosViewController ) -> Int{
+    func numOfPhotos(photoController: UIViewController ) -> Int{
         return photos.count
     }
     
-    func photo(photoController: NHPhotosViewController, index: Int) -> NHPhoto {
+    func photo(photoController: UIViewController, index: Int) -> NHPhoto {
         return photos[index]
     }
 

@@ -9,18 +9,20 @@
 import UIKit
 import Kingfisher
 
+/// Photo Cell
 public class NHPhotoCollectionViewCell: UICollectionViewCell {
     
     public var imageView: UIImageView?
     public var photo: NHPhoto? {
         didSet {
             if let photo = photo {
-                if let url = photo.image_url {
-                    imageView?.kf.setImage(with: url, placeholder: photo.placeholder_image )
-                }
-                else if let img = photo.image  {
+                if let img = photo.image  {
                     imageView?.image = img
                 }
+                else if let url = photo.image_url {
+                    imageView?.kf.setImage(with: url, placeholder: photo.placeholder_image )
+                }
+               
             }
         }
     }

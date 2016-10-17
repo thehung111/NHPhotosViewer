@@ -11,14 +11,20 @@ import UIKit
 private let reuseIdentifier = "NHPhotoCollectionViewCell"
 
 public protocol NHPhotosViewControllerDelegate: class {
-    func numOfPhotos(photoController: NHPhotosViewController ) -> Int
-    func photo(photoController: NHPhotosViewController, index: Int) -> NHPhoto
+    func numOfPhotos(photoController: UIViewController ) -> Int
+    func photo(photoController: UIViewController, index: Int) -> NHPhoto
 }
 
 open class NHPhotosViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     /// delegate for getting photos and possible interaction events
-    public weak var delegate: NHPhotosViewControllerDelegate?
+    public weak var delegate: NHPhotosViewControllerDelegate? {
+        didSet {
+            sliderController?.delegate = self.delegate
+        }
+    }
+    public var sliderController: NHPhotosSliderViewController?
+    public var backgroundColor: UIColor = UIColor.black
     
     /// spacing at the top
     public var topSpacing : CGFloat = 1.0 {
@@ -62,18 +68,23 @@ open class NHPhotosViewController: UICollectionViewController, UICollectionViewD
     /// MARK: init methods
     public init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        sliderController = NHPhotosSliderViewController(nibName: nil, bundle:nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        sliderController = NHPhotosSliderViewController(nibName: nil, bundle:nil)
     }
     
     /// common override methods
     override open func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = backgroundColor
+        sliderController?.view.backgroundColor = backgroundColor
+        
         reloadLayout()
-
+        
         // Register cell classes
         self.collectionView!.register(NHPhotoCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -134,35 +145,14 @@ open class NHPhotosViewController: UICollectionViewController, UICollectionViewD
         return cell
     }
     
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override open func collectionView(_ collectionView: UICollectionView,
+                               didSelectItemAt indexPath: IndexPath){
+        
+        sliderController?.curPhotoIndex = indexPath.row
+        // assume that we are in a navigation controller
+        self.navigationController?.pushViewController(sliderController!, animated: true)
+        
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
 
 }

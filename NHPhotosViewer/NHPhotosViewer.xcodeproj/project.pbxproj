@@ -14,6 +14,8 @@
 		BD0BB4051DB3707E000DE41F /* NHPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB4041DB3707E000DE41F /* NHPhotosViewController.swift */; };
 		BD0BB4071DB373F7000DE41F /* NHPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB4061DB373F7000DE41F /* NHPhoto.swift */; };
 		BD0BB4091DB377D3000DE41F /* NHPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB4081DB377D3000DE41F /* NHPhotoCollectionViewCell.swift */; };
+		BDB140591DB51CED0045718B /* NHImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB140581DB51CED0045718B /* NHImageScrollView.swift */; };
+		BDB1405B1DB535240045718B /* NHPhotosSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1405A1DB535240045718B /* NHPhotosSliderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		BD0BB4041DB3707E000DE41F /* NHPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHPhotosViewController.swift; sourceTree = "<group>"; };
 		BD0BB4061DB373F7000DE41F /* NHPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHPhoto.swift; sourceTree = "<group>"; };
 		BD0BB4081DB377D3000DE41F /* NHPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDB140581DB51CED0045718B /* NHImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHImageScrollView.swift; sourceTree = "<group>"; };
+		BDB1405A1DB535240045718B /* NHPhotosSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHPhotosSliderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		BD0BB3A61DB33C24000DE41F /* NHPhotosViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BD0BB4081DB377D3000DE41F /* NHPhotoCollectionViewCell.swift */,
 				BD0BB4061DB373F7000DE41F /* NHPhoto.swift */,
+				BD0BB4081DB377D3000DE41F /* NHPhotoCollectionViewCell.swift */,
+				BDB140581DB51CED0045718B /* NHImageScrollView.swift */,
+				BDB1405A1DB535240045718B /* NHPhotosSliderViewController.swift */,
 				BD0BB4041DB3707E000DE41F /* NHPhotosViewController.swift */,
 				BD0BB3A71DB33C24000DE41F /* NHPhotosViewer.h */,
 				BD0BB3A81DB33C24000DE41F /* Info.plist */,
@@ -239,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0BB4071DB373F7000DE41F /* NHPhoto.swift in Sources */,
+				BDB140591DB51CED0045718B /* NHImageScrollView.swift in Sources */,
 				BD0BB4051DB3707E000DE41F /* NHPhotosViewController.swift in Sources */,
 				BD0BB4091DB377D3000DE41F /* NHPhotoCollectionViewCell.swift in Sources */,
+				BDB1405B1DB535240045718B /* NHPhotosSliderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
