@@ -40,14 +40,15 @@ open class NHPhotosSliderViewController: UIViewController {
     
     open func setup(){
         scrollView = NHImageScrollView(frame: self.view.bounds)
-        self.view.addSubview(scrollView!)
+        self.view = scrollView!
     }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
+    
     open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
