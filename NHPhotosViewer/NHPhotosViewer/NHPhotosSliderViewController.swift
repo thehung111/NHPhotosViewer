@@ -42,13 +42,21 @@ open class NHPhotosSliderViewController: UIViewController {
         scrollView = NHImageScrollView(frame: self.view.bounds)
         self.view = scrollView!
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(NHPhotosSliderViewController.toggle(sender:)) )
-        scrollView!.isUserInteractionEnabled = true
-        scrollView!.addGestureRecognizer(gesture)
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(NHPhotosSliderViewController.toggle(sender:)) )
+        scrollView!.addGestureRecognizer(singleTapGesture)
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(NHPhotosSliderViewController.doubleTap(recognizer:)) )
+        doubleTapGesture.numberOfTapsRequired = 2
+        scrollView!.addGestureRecognizer(doubleTapGesture)
+        
+        // make sure that double tap take priority for zooming
+        singleTapGesture.require(toFail: doubleTapGesture)
+        
         self.automaticallyAdjustsScrollViewInsets = false
         
     }
     
+    // MARK: standard view methods
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +67,33 @@ open class NHPhotosSliderViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    //MARK: double tap to zoom
+    func doubleTap(recognizer: UITapGestureRecognizer) {
+        if let scrollView = self.scrollView {
+            let pointInView = recognizer.location(in: scrollView.imageView!)
+        
+            var newZoomScale = scrollView.maximumZoomScale;
+
+            if (scrollView.zoomScale >= scrollView.maximumZoomScale
+                || abs(scrollView.zoomScale - scrollView.maximumZoomScale) <= 0.01) {
+               
+                newZoomScale = scrollView.minimumZoomScale;
+            }
+            
+            let scrollViewSize = scrollView.bounds.size;
+
+            let width   : CGFloat = scrollViewSize.width / newZoomScale;
+            let height  : CGFloat = scrollViewSize.height / newZoomScale;
+            let originX : CGFloat = pointInView.x - (width / 2.0);
+            let originY : CGFloat = pointInView.y - (height / 2.0);
+
+            let rectToZoomTo : CGRect = CGRect(x: originX, y: originY, width: width, height: height);
+            scrollView.zoom(to: rectToZoomTo, animated: true)
+
+        }
+    }
+    
+    //MARK: toggle navigation bar, status bar
     func toggle(sender: AnyObject) {
         
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
