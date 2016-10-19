@@ -41,11 +41,37 @@ open class NHPhotosSliderViewController: UIViewController {
     open func setup(){
         scrollView = NHImageScrollView(frame: self.view.bounds)
         self.view = scrollView!
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(NHPhotosSliderViewController.toggle(sender:)) )
+        scrollView!.isUserInteractionEnabled = true
+        scrollView!.addGestureRecognizer(gesture)
+        self.automaticallyAdjustsScrollViewInsets = false
+        
     }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    func toggle(sender: AnyObject) {
+        
+        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+    }
+    
+    
+    override open var prefersStatusBarHidden: Bool {
+        return navigationController?.isNavigationBarHidden == true
+    }
+    
+    
+    open override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
     }
     
     

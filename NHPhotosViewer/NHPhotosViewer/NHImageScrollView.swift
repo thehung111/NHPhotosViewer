@@ -128,7 +128,7 @@ public class NHImageScrollView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    private func centerScrollViewContents(){
+    public func centerScrollViewContents(){
         
         var horizontalInset : CGFloat = 0
         var verticalInset : CGFloat = 0
