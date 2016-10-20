@@ -6,10 +6,11 @@ Pod::Spec.new do |s|
 
   
   s.name         = "NHPhotosViewer"
-  s.version      = "0.1.1"
-  s.summary      = "Simple photo viewers written in Swift."
+  s.version      = "0.1.2"
+  s.summary      = "Simple photo viewer written in Swift."
 
   s.description  = <<-DESC
+                   Simple photos viewer written in Swift
                    DESC
 
   s.homepage     = "https://github.com/thehung111/NHPhotosViewer"
@@ -26,7 +27,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/thehung111/NHPhotosViewer.git", :tag => "#{s.version}" }
 
 
-  s.source_files  = "NHPhotosViewer", "NHPhotosViewer/NHPhotosViewer/**/*.{h,m,swift}"
+  s.source_files  = "NHPhotosViewer", "NHPhotosViewer/NHPhotosViewer/**/*.{h,swift}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

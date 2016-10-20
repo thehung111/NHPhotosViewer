@@ -1,0 +1,292 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 19,
+      "symbol": "NHImageScrollView.photo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 51,
+      "symbol": "NHImageScrollView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 57,
+      "symbol": "NHImageScrollView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 63,
+      "symbol": "NHImageScrollView.init(image:frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 68,
+      "symbol": "NHImageScrollView.didAddSubview(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 73,
+      "symbol": "NHImageScrollView.frame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 97,
+      "symbol": "NHImageScrollView.updateImage(image:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 131,
+      "symbol": "NHImageScrollView.centerScrollViewContents()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 149,
+      "symbol": "NHImageScrollView.viewForZooming(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHImageScrollView.swift",
+      "line": 153,
+      "symbol": "NHImageScrollView.scrollViewDidZoom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhoto.swift",
+      "line": 11,
+      "symbol": "NHPhoto",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhoto.swift",
+      "line": 28,
+      "symbol": "NHPhoto.init(image:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhoto.swift",
+      "line": 32,
+      "symbol": "NHPhoto.init(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhoto.swift",
+      "line": 36,
+      "symbol": "NHPhoto.init(string:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotoCollectionViewCell.swift",
+      "line": 15,
+      "symbol": "NHPhotoCollectionViewCell.imageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotoCollectionViewCell.swift",
+      "line": 16,
+      "symbol": "NHPhotoCollectionViewCell.photo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotoCollectionViewCell.swift",
+      "line": 30,
+      "symbol": "NHPhotoCollectionViewCell.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotoCollectionViewCell.swift",
+      "line": 36,
+      "symbol": "NHPhotoCollectionViewCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotoCollectionViewCell.swift",
+      "line": 50,
+      "symbol": "NHPhotoCollectionViewCell.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 14,
+      "symbol": "NHPhotosSliderViewController.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 15,
+      "symbol": "NHPhotosSliderViewController.scrollView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 16,
+      "symbol": "NHPhotosSliderViewController.curPhotoIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 36,
+      "symbol": "NHPhotosSliderViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 41,
+      "symbol": "NHPhotosSliderViewController.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 60,
+      "symbol": "NHPhotosSliderViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 65,
+      "symbol": "NHPhotosSliderViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 103,
+      "symbol": "NHPhotosSliderViewController.prefersStatusBarHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 108,
+      "symbol": "NHPhotosSliderViewController.preferredStatusBarUpdateAnimation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosSliderViewController.swift",
+      "line": 113,
+      "symbol": "NHPhotosSliderViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 13,
+      "symbol": "NHPhotosViewControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 14,
+      "symbol": "NHPhotosViewControllerDelegate.numOfPhotos(photoController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 15,
+      "symbol": "NHPhotosViewControllerDelegate.photo(photoController:index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 18,
+      "symbol": "NHPhotosViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 26,
+      "symbol": "NHPhotosViewController.sliderController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 27,
+      "symbol": "NHPhotosViewController.backgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 74,
+      "symbol": "NHPhotosViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 93,
+      "symbol": "NHPhotosViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 123,
+      "symbol": "NHPhotosViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 128,
+      "symbol": "NHPhotosViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 136,
+      "symbol": "NHPhotosViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer/NHPhotosViewController.swift",
+      "line": 148,
+      "symbol": "NHPhotosViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/visenze/Desktop/xcode_workspace/NHPhotosViewer/NHPhotosViewer/NHPhotosViewer"
+}

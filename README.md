@@ -7,6 +7,10 @@ NHPhotosViewer is designed to be presented within a navigation controller. Simpl
 
 Downloading/caching of images are done via [Kingfisher](https://github.com/onevcat/Kingfisher) library.
 
+## Status
+
+Project under development. Missing many features. Just a very simple image gallery for now.
+
 ## Installation via CocoaPods
 
 `pod "NHPhotosViewer" `
@@ -14,6 +18,9 @@ Downloading/caching of images are done via [Kingfisher](https://github.com/onevc
 ## Code Example
 
 ```swift
+
+import NHPhotosViewer
+...
 
 override func viewDidLoad() {
 	let urls : [String] =
@@ -58,7 +65,5 @@ func photo(photoController: UIViewController, index: Int) -> NHPhoto {
 
 ```
 
-## Status
 
-Project under development. Missing many features. Just a very simple image gallery for now.
 

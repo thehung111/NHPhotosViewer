@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NHPhotosViewer  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+
+    <a title="NHPhotosViewer  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          NHPhotosViewer Docs
+        </a>
+         (29% documented)
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/thehung111/NHPhotosViewer">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">NHPhotosViewer Reference</a>
+      <img class="carat" src="img/carat.png" />
+      NHPhotosViewer  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NHImageScrollView.html">NHImageScrollView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NHPhoto.html">NHPhoto</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NHPhotoCollectionViewCell.html">NHPhotoCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NHPhotosSliderViewController.html">NHPhotosSliderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NHPhotosViewController.html">NHPhotosViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/NHPhotosViewControllerDelegate.html">NHPhotosViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <a href='#nhphotosviewer' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='nhphotosviewer'>NHPhotosViewer</h1>
+
+<p>Simple photos viewer written in Swift.</p>
+
+<p><img src="http://img.shields.io/badge/swift-3.0-brightgreen.svg" alt="Swift"></p>
+
+<p>NHPhotosViewer is designed to be presented within a navigation controller. Simply set the delegate (which must conform to <code>NHPhotosViewControllerDelegate</code>) and implement the 2 required delegate methods to provide the photo viewer with the data in the form of NHPhoto objects. You can create an NHPhoto object by providing a UIImage object, or a URL containing the path to a file or an image online. </p>
+
+<p>Downloading/caching of images are done via <a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> library.</p>
+<a href='#status' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='status'>Status</h2>
+
+<p>Project under development. Missing many features. Just a very simple image gallery for now.</p>
+<a href='#installation-via-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation-via-cocoapods'>Installation via CocoaPods</h2>
+
+<p><code>pod &quot;NHPhotosViewer&quot;</code></p>
+<a href='#code-example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='code-example'>Code Example</h2>
+<pre class="highlight swift"><code>
+<span class="kd">import</span> <span class="kt">NHPhotosViewer</span>
+<span class="o">...</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">urls</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span>
+    <span class="p">[</span>   
+        <span class="s">"http://somedomain.com/image.png"</span><span class="p">,</span>
+        <span class="s">"http://somedomain.com/anotherimage.png"</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+
+    <span class="o">...</span>
+
+    <span class="k">for</span> <span class="n">url</span> <span class="k">in</span> <span class="n">urls</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">photo</span> <span class="o">=</span> <span class="kt">NHPhoto</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span><span class="o">!</span> <span class="p">)</span>
+        <span class="c1">// set placeholder image if necessary</span>
+        <span class="c1">//photo.placeholder_image = placeholderImg</span>
+        <span class="n">photos</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">photo</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">viewer</span> <span class="o">=</span> <span class="kt">NHPhotosViewController</span><span class="p">()</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">viewer</span><span class="p">?</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">viewer</span><span class="p">?</span><span class="o">.</span><span class="n">numOfColumns</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="p">}</span>
+
+<span class="c1">// open viewer with navigation controller</span>
+<span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">openViewer</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">viewer</span><span class="p">?</span><span class="o">.</span><span class="n">navigationItem</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">"Photos"</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">viewer</span><span class="o">!</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="c1">//NHPhotosViewControllerDelegate</span>
+<span class="kd">func</span> <span class="nf">numOfPhotos</span><span class="p">(</span><span class="nv">photoController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">{</span>
+    <span class="k">return</span> <span class="n">photos</span><span class="o">.</span><span class="n">count</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">photo</span><span class="p">(</span><span class="nv">photoController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NHPhoto</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">photos</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="p">}</span>
+
+
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2016 <a class="link" href="https://github.com/thehung111/NHPhotosViewer" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2016-10-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
