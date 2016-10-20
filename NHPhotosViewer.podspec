@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/thehung111/NHPhotosViewer.git", :tag => "#{s.version}" }
 
 
-  s.source_files  = "NHPhotosViewer", "NHPhotosViewer/NHPhotosViewer/**/*.{h,swift}"
+  s.source_files  = "NHPhotosViewer/NHPhotosViewer/**/*.{h,swift}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

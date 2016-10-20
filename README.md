@@ -15,6 +15,10 @@ Project under development. Missing many features. Just a very simple image galle
 
 `pod "NHPhotosViewer" `
 
+## Documentation
+
+[https://thehung111.github.io/NHPhotosViewer/](https://thehung111.github.io/NHPhotosViewer/)
+
 ## Code Example
 
 ```swift
